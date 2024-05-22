@@ -1,7 +1,5 @@
 <odoo>
     <data>
-            <field name="value">0</field>
-          </record>
 
           <record id="object1" model="mission2.mission2">
             <field name="name">Object 1</field>
