@@ -20,6 +20,8 @@ class Mission2(http.Controller):
             'object': obj
         })
 
-    @http.route('/mission2/mission2/objects/description', auth='public')
-    def index2(self, **kw):
-        return "Hello, buddy"
+    @http.route('/mission2/mission2/objects/description/<model("mission2.mission2"):obj>', auth='public')
+    def description(self, obj, **kw):
+        return http.request.render('mission2.description', {
+            'object': obj
+        })

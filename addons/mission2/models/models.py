@@ -11,7 +11,7 @@ class mission2(models.Model):
      value = fields.Integer()
      value2 = fields.Float(compute="_value_pc", store=True)
      description = fields.Text()
-     flightplan = fields.One2many('mission2.flightplan')
+     flightplan = fields.One2many('mission2.flightplan', 'name')
      status = fields.Many2one('mission2.status')
 
      @api.depends('value')

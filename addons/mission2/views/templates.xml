@@ -18,5 +18,14 @@
             </t>
           </dl>
         </template>
+        <template id="description">
+          <h1><t t-esc="object.display_name"/></h1>
+          <dl>
+            <t>
+              <dt><t t-esc="description"/></dt>
+              <dd><t t-esc="object.description"/></dd>
+            </t>
+          </dl>
+        </template>
     </data>
 </odoo>

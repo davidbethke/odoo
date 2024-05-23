@@ -19,7 +19,7 @@ pre, post, in-flight plan
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Human Resources/Employees',
-    'version': '0.60',
+    'version': '0.67',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
