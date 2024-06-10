@@ -28,20 +28,22 @@ class Mission2(http.Controller):
             'object': obj
         })
 
-    @http.route('/mission2/mission2/list', type='json', auth="public")
+    @http.route('/mission2/mission2/list', type='json', auth="user")
     def listJSON(self, **kw):
         #missions = request.env['mission2.mission2'].sudo().search([])
-        missions = request.env['mission2.mission2'].sudo().search([])
+        missions = request.env['mission2.mission2'].search([])
         resp = {}
+        allresp=[]
         for mission in missions:
             resp[mission.name]= mission.value
-            #item.clear()
+            allresp.append(resp.copy())
+            resp.clear()
         output = {
         'results':{
             'code':200,
             'message':'OK'
              }
         }
-        return json.dumps(resp)
+        return json.dumps(allresp)
         #return http.Response(json.dumps(output), status=200, headers={"Content-type": "application/json"})
 
