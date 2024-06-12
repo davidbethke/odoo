@@ -13,6 +13,18 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="mission2.list_requests">
+      <field name="name">mission2 list</field>
+      <field name="model">mission2.request</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="mission2.action_window">
       <field name="name">mission2 window</field>
@@ -20,6 +32,11 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <record model="ir.actions.act_window" id="mission2.action_window_requests">
+      <field name="name">mission2 requests window</field>
+      <field name="res_model">mission2.request</field>
+      <field name="view_mode">tree,form</field>
+    </record>
     <!-- server action to the one above -->
     <record model="ir.actions.server" id="mission2.action_server">
       <field name="name">mission2 server</field>
@@ -37,12 +54,15 @@
     <!-- Top menu item -->
     <menuitem name="mission2" id="mission2.menu_root"/>
     <!-- menu categories -->
-    <menuitem name="Menu 1" id="mission2.menu_1" parent="mission2.menu_root"/>
-    <menuitem name="Menu 2" id="mission2.menu_2" parent="mission2.menu_root"/>
+    <menuitem name="Missions" id="mission2.menu_1" parent="mission2.menu_root"/>
+    <menuitem name="Missions Server" id="mission2.menu_2" parent="mission2.menu_root"/>
+    <menuitem name="Requests" id="mission2.menu_3" parent="mission2.menu_root"/>
     <!-- actions -->
-    <menuitem name="List" id="mission2.menu_1_list" parent="mission2.menu_1"
+    <menuitem name="List Missions" id="mission2.menu_1_list" parent="mission2.menu_1"
               action="mission2.action_window"/>
     <menuitem name="Server to list" id="mission2" parent="mission2.menu_2"
               action="mission2.action_server"/>
+    <menuitem name="List Requests" id="mission2.menu_3_list_requests" parent="mission2.menu_3"
+              action="mission2.action_window_requests"/>
   </data>
 </odoo>
