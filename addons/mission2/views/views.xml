@@ -25,6 +25,29 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="mission2.list_reports">
+      <field name="name">mission2 list</field>
+      <field name="model">mission2.report</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="mission2.list_auctions">
+      <field name="name">mission2 list</field>
+      <field name="model">mission2.auction</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="mission2.action_window">
       <field name="name">mission2 window</field>
@@ -35,6 +58,16 @@
     <record model="ir.actions.act_window" id="mission2.action_window_requests">
       <field name="name">mission2 requests window</field>
       <field name="res_model">mission2.request</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="mission2.action_window_reports">
+      <field name="name">mission2 reports window</field>
+      <field name="res_model">mission2.report</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="mission2.action_window_auctions">
+      <field name="name">mission2 auctions window</field>
+      <field name="res_model">mission2.auction</field>
       <field name="view_mode">tree,form</field>
     </record>
     <!-- server action to the one above -->
@@ -54,9 +87,11 @@
     <!-- Top menu item -->
     <menuitem name="mission2" id="mission2.menu_root"/>
     <!-- menu categories -->
+    <menuitem name="Requests" id="mission2.menu_3" parent="mission2.menu_root"/>
+    <menuitem name="Auctions" id="mission2.menu_4" parent="mission2.menu_root"/>
     <menuitem name="Missions" id="mission2.menu_1" parent="mission2.menu_root"/>
     <menuitem name="Missions Server" id="mission2.menu_2" parent="mission2.menu_root"/>
-    <menuitem name="Requests" id="mission2.menu_3" parent="mission2.menu_root"/>
+    <menuitem name="Reports" id="mission2.menu_5" parent="mission2.menu_root"/>
     <!-- actions -->
     <menuitem name="List Missions" id="mission2.menu_1_list" parent="mission2.menu_1"
               action="mission2.action_window"/>
@@ -64,5 +99,9 @@
               action="mission2.action_server"/>
     <menuitem name="List Requests" id="mission2.menu_3_list_requests" parent="mission2.menu_3"
               action="mission2.action_window_requests"/>
+    <menuitem name="List Auctions" id="mission2.menu_4_list_auctions" parent="mission2.menu_4"
+              action="mission2.action_window_auctions"/>
+    <menuitem name="List Reports" id="mission2.menu_4_list_reports" parent="mission2.menu_5"
+              action="mission2.action_window_reports"/>
   </data>
 </odoo>
