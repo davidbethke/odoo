@@ -5,3 +5,7 @@ access_mission2_flightplan,mission2.flightplan,model_mission2_flightplan,group_h
 access_mission2_request,mission2.request,model_mission2_request,group_hr_request,1,1,1,1
 access_mission2_request_admin,mission2.request.admin,model_mission2_request,group_hr_request_admin,1,1,1,1
 access_mission2_status,mission2.status,model_mission2_status,group_hr_mission,1,1,1,1
+access_mission2_report,mission2.report,model_mission2_report,group_hr_report,1,1,1,1
+access_mission2_report,mission2.report.admin,model_mission2_report,group_hr_report,1,1,1,1
+access_mission2_auction,mission2.auction,model_mission2_auction,group_hr_auction,1,1,1,1
+access_mission2_auction,mission2.auction.admin,model_mission2_auction,group_hr_auction,1,1,1,1
