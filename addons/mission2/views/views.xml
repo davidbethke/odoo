@@ -101,7 +101,7 @@
               action="mission2.action_window_requests"/>
     <menuitem name="List Auctions" id="mission2.menu_4_list_auctions" parent="mission2.menu_4"
               action="mission2.action_window_auctions"/>
-    <menuitem name="List Reports" id="mission2.menu_4_list_reports" parent="mission2.menu_5"
+    <menuitem name="List Reports" id="mission2.menu_5_list_reports" parent="mission2.menu_5"
               action="mission2.action_window_reports"/>
   </data>
 </odoo>

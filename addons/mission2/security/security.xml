@@ -76,7 +76,7 @@
             <field name="groups" eval="[(4, ref('mission2.group_hr_report_admin'))]"/>
     </record>
     <record id="hr_report_rule_all" model="ir.rule">
-            <field name="name">Customer Owner: Restricted access</field>
+            <field name="name">Customer Owner: Report access</field>
             <field name="model_id" ref="model_mission2_report"/>
             <field name="domain_force">[('name','=', user.name)]</field>
             <field name="groups" eval="[(4, ref('mission2.group_hr_report'))]"/>

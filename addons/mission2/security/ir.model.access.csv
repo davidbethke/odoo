@@ -6,6 +6,6 @@ access_mission2_request,mission2.request,model_mission2_request,group_hr_request
 access_mission2_request_admin,mission2.request.admin,model_mission2_request,group_hr_request_admin,1,1,1,1
 access_mission2_status,mission2.status,model_mission2_status,group_hr_mission,1,1,1,1
 access_mission2_report,mission2.report,model_mission2_report,group_hr_report,1,1,1,1
-access_mission2_report,mission2.report.admin,model_mission2_report,group_hr_report_admin,1,1,1,1
+access_mission2_report_admin,mission2.report.admin,model_mission2_report,group_hr_report_admin,1,1,1,1
 access_mission2_auction,mission2.auction,model_mission2_auction,group_hr_auction,1,1,1,1
-access_mission2_auction,mission2.auction.admin,model_mission2_auction,group_hr_auction_admin,1,1,1,1
+access_mission2_auction_admin,mission2.auction.admin,model_mission2_auction,group_hr_auction_admin,1,1,1,1

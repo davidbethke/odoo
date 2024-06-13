@@ -47,3 +47,39 @@ class Mission2(http.Controller):
         return json.dumps(allresp)
         #return http.Response(json.dumps(output), status=200, headers={"Content-type": "application/json"})
 
+    @http.route('/mission2/request/list', type='json', auth="user")
+    def listJSON(self, **kw):
+        requests = request.env['mission2.request'].search([])
+        resp = {}
+        allresp=[]
+        for request in requests:
+            resp[request.name]= request.value
+            allresp.append(resp.copy())
+            resp.clear()
+        return json.dumps(allresp)
+
+    @http.route('/mission2/auction/list', type='json', auth="user")
+    def listJSON(self, **kw):
+        auctions = request.env['mission2.auction'].search([])
+        resp = {}
+        allresp=[]
+        for auction in auctions:
+            resp[auction.name]= auction.value
+            allresp.append(resp.copy())
+            resp.clear()
+        return json.dumps(allresp)
+
+    @http.route('/mission2/report/list', type='json', auth="user")
+    def listJSON(self, **kw):
+        reports = request.env['mission2.report'].search([])
+        resp = {}
+        allresp=[]
+        for report in reports:
+            resp[report.name]= report.value
+            allresp.append(resp.copy())
+            resp.clear()
+        return json.dumps(allresp)
+
+
+
+
